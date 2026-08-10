@@ -30,7 +30,7 @@ Ghi tên biến và **nguồn giá trị**, không ghi giá trị:
 |------|--------|---------|
 | `PORT` | ✅ | platform tự gán |
 | `AGENT_API_KEY` | ✅ | đặt trong dashboard, không nằm trong repo |
-| `REDIS_URL` | ✅ | redis://red-d9sk1u7avr4c73be5u1g:6379 |
+| `REDIS_URL` | ✅ | Render Redis (private connection string) |
 | `RATE_LIMIT_PER_MINUTE` | ✅ | 10 |
 | `MONTHLY_BUDGET_USD` | ✅ | 10.0 |
 | `LOG_LEVEL` | ✅ | INFO |
@@ -141,18 +141,6 @@ alt-svc: h3=":443"; ma=86400
 
 ---
 
-## Nếu Dùng Phương Án Dự Phòng
-Không dùng phương án dự phòng.
-<!-- 
-Không đăng ký được tài khoản cloud? Vẫn nộp được bài, nhưng CP5 tối đa 60% điểm: -->
+## Phương Án Đã Dùng
 
-<!-- 1. Đặt `LOCAL_FALLBACK=true` trong `.env`
-2. Chạy `docker compose up -d` rồi kiểm tra `docker compose ps`
-3. Chụp màn hình vào `screenshots/`
-4. Chạy `pytest tests/test_cp5.py -v` — bộ test sẽ tự chuyển sang kiểm tra
-   `http://localhost:8000`
-5. Ghi rõ lý do không deploy được vào phần dưới đây:
-
-```
-(điền lý do nếu dùng phương án dự phòng, ngược lại xóa mục này)
-``` -->
+Đã deploy thật trên Render, không dùng phương án dự phòng `LOCAL_FALLBACK`.
